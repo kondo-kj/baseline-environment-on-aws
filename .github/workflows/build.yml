@@ -29,6 +29,7 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: npm
       # TODO: Temporarily avoid 8.4 due to: https://github.com/npm/cli/issues/4341
+      - run: npm i -g npm@8.3
       - run: npm i -g npm
       - run: |
           echo "node: $(node --version)"
